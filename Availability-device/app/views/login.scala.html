@@ -1,0 +1,14 @@
+@(form: Form[LoginController.LoginForm], target: Option[String])(implicit messages: MessagesProvider, req: RequestHeader)
+
+@main("Login", Page.Login) {
+    @helper.form(routes.LoginController.doLogin(target), 'class -> "form-signin") {
+        @helper.CSRF.formField
+        <fieldset>
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">Please log in </h1>
+            @helper.inputText(form("username"), 'class -> "form-control", 'placeholder -> "Username", '_label -> "Username")
+            @helper.inputPassword(form("password"), 'class -> "form-control", 'placeholder -> "Password", '_label -> "Password")
+            <button id="login" class="btn btn-lg btn-secondary btn-block" type="submit">Sign in</button>
+        </fieldset>
+    }
+}

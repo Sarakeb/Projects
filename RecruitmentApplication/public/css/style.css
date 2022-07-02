@@ -1,0 +1,10 @@
+body{
+background-image: url(./background.jpg);
+background-size:cover;
+background-attachment: fixed;
+}
+
+#welcomeMessage, h4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:whitesmoke;
+}
